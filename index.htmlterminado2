@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Blog Tech</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f4f4f4;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            background-color: #183C63;
+            color: #fff;
+            max-width: 800px;
+            margin: 20px auto 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            background: #fff;
+            color: #183C63;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            padding: 20px;
+        }
+
+        article {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        article:last-child {
+            border-bottom: none;
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+        }
+
+        .conteudo {
+            flex: 1;
+        }
+
+        .artigo-autor {
+            font-weight: bold;
+            margin: 8px 0;
+        }
+
+        .botoes {
+            margin-top: 12px;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin-right: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Meu Blog Tech</h1>
+        <p>Vou compartilhar conhecimentos sobre tecnologia e programação.</p>
+    </header>
+
+    <main>
+
+        <article>
+            <img src="logo-do-blog.jpg"
+                alt="Logo do blog de tecnologia e programação">
+
+            <div class="conteudo">
+                <h2>Meu primeiro post</h2>
+
+                <p class="artigo-autor">
+                    Por: Caetano Ferreira
+                </p>
+
+                <p>
+                    Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de
+                    programação e curiosidades da área de tecnologia.
+                </p>
+
+                <div class="botoes">
+                    <button>❤️ <span>0</span></button>
+                    <button>👍 <span>0</span></button>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <img src="logo-do-blog.jpg"
+                alt="Um escudo heráldico estilizado com ícones coloridos divididos em quatro quadrantes. O escudo tem uma moldura azul escura e um fundo com um padrão de circuito de placa-mãe">
+
+            <div class="conteudo">
+                <h2>Meu segundo post</h2>
+
+                <p class="artigo-autor">
+                    Por: Gabriel de Lima
+                </p>
+
+                <p>
+                    Continue acompanhando o blog para aprender HTML, CSS,
+                    JavaScript e diversas dicas sobre desenvolvimento web.
+                </p>
+
+                <div class="botoes">
+                    <button>❤️ <span>0</span></button>
+                    <button>👍 <span>0</span></button>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <script>
+        const botoes = document.querySelectorAll("button");
+
+        botoes.forEach((botao) => {
+            botao.addEventListener("click", () => {
+                const contador = botao.querySelector("span");
+                contador.textContent = Number(contador.textContent) + 1;
+            });
+        });
+    </script>
+
+</body>
+
+</html>
